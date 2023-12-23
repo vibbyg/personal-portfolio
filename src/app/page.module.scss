@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  color: $color-text-homepage;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  margin-right: 2rem;
+
+}
+
+.flower_group {
+  display: flex;
+  flex-direction: column;
+  margin-left: 6rem;
+  width: 537px; // equivalent to width of flower pot
+  scale: 90%;
+  @media (max-height: 695px) {
+    scale: 75%;
+  }
+  &__seeds {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  animation: float 4s linear infinite;
+}
+
+.mask_container {
+  filter: drop-shadow(10px 10px 15px rgba(121, 116, 116, 0.75));
+
+  &__flowerpot {
+    mask: url("../../public/assets/flowerpot.svg") no-repeat center/contain;
+    cursor: pointer;
+  }
+  &__animate {
+  }
+}
+
+.arrow_container {
+  display: flex;
+  flex-direction: row;
+
+  &__arrow {
+    position: absolute;
+    transform: translate(-120%);
+    animation: Pulsate 4s linear infinite;
+  }
+}
+
+@keyframes Pulsate {
+  from { opacity: 1; }
+  50% { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0% {
+
+    transform: translatey(0px);
+  }
+  50% {
+
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes movedown {
+  0% { transform: translatey(0px); }
+  100% { transform: translatey(30px);}
+}
