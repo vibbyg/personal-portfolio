@@ -6,9 +6,10 @@ import portfolio from '../../public/assets/portfolio.jpg';
 import blog from '../../public/assets/smolhead.jpg';
 import Image from 'next/image';
 import { useState } from 'react';
-import Seed from './components/Seed';
+import Seed from './components/Seed/Seed';
 import ArrowLeft from '../../public/assets/ArrowLeft';
 import classNames from "classnames";
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 export default function Home() {
@@ -17,38 +18,62 @@ export default function Home() {
 
   const handleFlowerPotClick = () => {
     showSeed(!seed);
-    
-  }
-  const seedProps = {
-    imageUrl: flowerpotbg
   }
 
 
   return (
     <main className={style.main}>
+      <div className={style.circles}>
+        <div className={style.circles__circle1} />
+        <div className={style.circles__circle2} />
+        <div className={style.circles__circle3} />
+        </div>
+      <AnimatePresence>
       <div className={style.flower_group}>
-        { seed ? 
-        <div className={style.flower_group__seeds}>
-          <Seed imageUrl={me} rotate={305} />
-          <Seed imageUrl={portfolio} bottomPadding={5}/>
-          <Seed imageUrl={blog} rotate={45} />
-        </div> 
-          : null }
-      <div className={style.mask_container}>
+        { seed && 
+        <motion.div className={style.flower_group__seeds} key="seeds"
+        initial={{ x: 0, opacity: 0, height: 0 }}
+        animate={{ x: 0, opacity: 1, height: "auto" }}
+        transition={{ duration: 0.2 }}
+        exit={{
+          x: 0,
+          opacity: 0,
+          transition: { duration: 1 },
+          height: 0
+        }}
+        >
+          <motion.div className={style.flower_group__seed}>
+            <Seed imageUrl={me} rotate={305} navigateTo='about'/>
+            <h3 style={{ marginTop: '-0.5rem'}}>me</h3>
+          </motion.div>
+          <motion.div className={style.flower_group__seed}>
+            <h3>portfolio</h3>
+            <Seed imageUrl={portfolio} bottomPadding={5} navigateTo='portfolio'/>
+          </motion.div>
+          <motion.div className={style.flower_group__seed}>
+            <Seed imageUrl={blog} rotate={45} navigateTo='blog'/>
+            <h3 style={{ marginTop: '-0.5rem'}}>blog</h3>
+          </motion.div>
+        </motion.div> }
+      <motion.div className={style.mask_container} key="flowerpot" transition={{ type: "spring" }}>
         <Image src={flowerpotbg} className={classNames(style.mask_container__flowerpot, seed ? style.mask_container__animate : null)} alt="flowerpot" onClick={(e) => handleFlowerPotClick()}/>
+      </motion.div>
       </div>
-      </div>
+      </AnimatePresence>
 
-      <div className={style.main__text}>
+      <motion.div className={style.main__text} whileTap={{
+        scale: 0.8,
+        borderRadius: "100%"
+      }}>
         <h1>hey, <br /> i'm vibhor!</h1>
         <h2>welcome to my garden 🪴</h2>
-        <div className={style.arrow_container} style={seed ? {visibility: 'hidden'} : {visibility: 'visible'}}>
+        <motion.div className={style.arrow_container} style={seed ? {visibility: 'hidden'} : {visibility: 'visible'}}>
           <div className={style.arrow_container__arrow}>
             <ArrowLeft />
           </div>
           <h3>click on the flower pot to explore more</h3>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </main>
   )
 }

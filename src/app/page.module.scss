@@ -11,8 +11,38 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    z-index: 10;
   }
   margin-right: 2rem;
+
+}
+
+.circles {
+  position: fixed;
+  opacity: 50%;
+  animation: float 4s infinite;
+  
+  &__circle1 {
+    width: 30.5482rem;
+    height: 30.5482rem;
+    border-radius: 50%;
+    background-color: #9faab3;
+    transform: translate(90%, 20%);
+  }
+  &__circle2 {
+    width: 22.132rem;
+    height: 22.132rem;
+    border-radius: 50%;
+    background-color: #9faab3;
+    transform: translate(250%, 50%);
+  }
+  &__circle3 {
+    width: 44.3125rem;
+    height: 44.3125rem;
+    border-radius: 50%;
+    background-color: #9faab3;
+    transform: translate(0%, 0%);
+  }
 
 }
 
@@ -21,7 +51,7 @@
   flex-direction: column;
   margin-left: 6rem;
   width: 537px; // equivalent to width of flower pot
-  scale: 90%;
+  scale: 85%;
   @media (max-height: 695px) {
     scale: 75%;
   }
@@ -29,6 +59,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+  }
+  &__seed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
   }
   animation: float 4s linear infinite;
 }
@@ -39,8 +75,6 @@
   &__flowerpot {
     mask: url("../../public/assets/flowerpot.svg") no-repeat center/contain;
     cursor: pointer;
-  }
-  &__animate {
   }
 }
 
