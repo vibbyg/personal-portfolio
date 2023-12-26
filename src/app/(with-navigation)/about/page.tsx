@@ -8,6 +8,7 @@ import InstagramLogo from "../../../../public/assets/InstagramLogo";
 import LinkedinLogo from "../../../../public/assets/LinkedinLogo";
 import YoutubeLogo from "../../../../public/assets/YoutubeLogo";
 import Link from "next/link";
+import Accordian from "../../components/Accordian/Accordian";
 
 function About() {
     const router = useRouter();
@@ -23,8 +24,8 @@ function About() {
         <div className={style.container}>
             <div className={style.profile}>
                     <Image className={style.clip_profile} src={me} alt="test" />
-                    <h3 className={style.profile__text}>Vibhor / vii • bor /</h3>
-                    <h3 className={style.profile__text}>CS @ UWaterloo</h3>
+                    <h4 className={style.profile__text}>Vibhor / vii • bor /</h4>
+                    <h4 className={style.profile__text}>CS @ UWaterloo</h4>
                     <div className={style.profile__socials}>
                         <Link href={social_links.github} target="_blank">
                             <GithubLogo />
@@ -41,7 +42,15 @@ function About() {
                     </div>
             </div>
             <div className={style.content}>
-                testing 2
+                <h3 className={style.content__text}>
+                    I’m Vibhor, a 3rd-year <span className={style.content__text__compsci}>Computer Science</span> student at the University of Waterloo. <br />
+                    I enjoy <span className={style.content__text__creating}>creating</span> things, whether they be experiences, projects, or videos.
+                </h3>
+                <br />
+                <br />
+                <h3 className={style.content__text}>
+                    Click below for random fun facts about me:
+                </h3>
             </div>
         </div>
     )
