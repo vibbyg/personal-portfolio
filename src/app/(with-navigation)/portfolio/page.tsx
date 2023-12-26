@@ -6,8 +6,6 @@ function Portfolio() {
 
     return(
         <div>
-            <h1>Portfolio</h1>
-            <button onClick={() => {router.replace('/')}}>Home</button>
         </div>
     )
 }

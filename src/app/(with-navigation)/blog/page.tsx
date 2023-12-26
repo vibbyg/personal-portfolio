@@ -6,8 +6,6 @@ function Blog() {
 
     return(
         <div>
-            <h1>Blog</h1>
-            <button onClick={() => {router.replace('/')}}>Home</button>
         </div>
     )
 }

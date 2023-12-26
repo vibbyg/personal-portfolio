@@ -1,13 +1,13 @@
 'use client'
 import style from './page.module.scss';
-import flowerpotbg from '../../public/assets/flowerpotbg.png';
-import me from '../../public/assets/me.jpg';
-import portfolio from '../../public/assets/portfolio.jpg';
-import blog from '../../public/assets/smolhead.jpg';
+import flowerpotbg from '../../../public/assets/flowerpotbg2.jpg';
+import me from '../../../public/assets/arreity.jpg';
+import portfolio from '../../../public/assets/fatmanhunterhunter.jpeg';
+import blog from '../../../public/assets/nostalgicpo.jpeg';
 import Image from 'next/image';
 import { useState } from 'react';
-import Seed from './components/Seed/Seed';
-import ArrowLeft from '../../public/assets/ArrowLeft';
+import Seed from '../components/Seed/Seed';
+import ArrowLeft from '../../../public/assets/ArrowLeft';
 import classNames from "classnames";
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -48,7 +48,7 @@ export default function Home() {
           </motion.div>
           <motion.div className={style.flower_group__seed}>
             <h3>portfolio</h3>
-            <Seed imageUrl={portfolio} bottomPadding={5} navigateTo='portfolio'/>
+            <Seed imageUrl={portfolio} navigateTo='portfolio'/>
           </motion.div>
           <motion.div className={style.flower_group__seed}>
             <Seed imageUrl={blog} rotate={45} navigateTo='blog'/>
@@ -67,7 +67,7 @@ export default function Home() {
       }}>
         <h1>hey, <br /> i'm vibhor!</h1>
         <h2>welcome to my garden 🪴</h2>
-        <motion.div className={style.arrow_container} style={seed ? {visibility: 'hidden'} : {visibility: 'visible'}}>
+        <motion.div className={classNames(style.arrow_container, seed ? style.hidden : style.visible)}>
           <div className={style.arrow_container__arrow}>
             <ArrowLeft />
           </div>

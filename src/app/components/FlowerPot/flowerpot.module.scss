@@ -1,8 +1,9 @@
 .mask_container {
-    filter: drop-shadow(10px 10px 15px rgba(121, 116, 116, 0.75));
+    filter: drop-shadow(10px 10px 15px rgba(121, 116, 116, 0.25));
   
     &__flowerpot {
-      mask: url("../../../public/assets/flowerpot.svg") no-repeat center/contain;
+      mask: url("../../../../public/assets/flowerpot.svg") no-repeat center/contain;
+      background-color: #BF3131;
       cursor: pointer;
     }
   }
