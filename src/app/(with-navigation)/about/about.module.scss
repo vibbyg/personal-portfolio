@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 27rem auto;
     overflow: auto;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .profile {
@@ -13,7 +13,7 @@
     align-items: center;
     gap: 1.5rem;
     padding: 0rem 4.4rem 1rem 4rem;
-    filter: drop-shadow(5px 5px 5px rgba(121, 116, 116, 0.50));
+    // filter: drop-shadow(5px 5px 5px rgba(121, 116, 116, 0.50));
     float: left;
 
     &__text {
@@ -59,7 +59,7 @@
 
     &__text {
         font-weight: 400;
-        line-height: normal;
+        line-height: 1.15;
         background-color: $color-bg;
         padding: 0rem;
         // padding: 2rem;
@@ -77,6 +77,20 @@
             font-style: italic;
         }
     }
+}
+
+.videos:hover::after {
+    content: ' 🎥';
+}
+
+
+.projects:hover::after {
+    content: ' 🛠';
+}
+
+
+.experiences:hover::after {
+    content: ' 🌁';
 }
 
 .content::-webkit-scrollbar {

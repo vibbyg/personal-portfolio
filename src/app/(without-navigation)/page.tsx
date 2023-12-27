@@ -1,6 +1,6 @@
 'use client'
 import style from './page.module.scss';
-import flowerpotbg from '../../../public/assets/flowerpotbg2.jpg';
+import flowerpotbg from '../../../public/assets/flowerpotbg3.png';
 import me from '../../../public/assets/arreity.jpg';
 import portfolio from '../../../public/assets/fatmanhunterhunter.jpeg';
 import blog from '../../../public/assets/nostalgicpo.jpeg';
@@ -28,13 +28,14 @@ export default function Home() {
         <div className={style.circles__circle2} />
         <div className={style.circles__circle3} />
         </div>
-      <AnimatePresence>
-      <div className={style.flower_group}>
+      <AnimatePresence initial={false}>
+      <motion.div className={style.flower_group}>
         { seed && 
-        <motion.div className={style.flower_group__seeds} key="seeds"
+        <motion.div className={style.flower_group__seeds} 
+        key="seeds"
         initial={{ x: 0, opacity: 0, height: 0 }}
         animate={{ x: 0, opacity: 1, height: "auto" }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 1, ease: [0.04, 0.62, 0.23, 0.98]}}
         exit={{
           x: 0,
           opacity: 0,
@@ -58,7 +59,7 @@ export default function Home() {
       <motion.div className={style.mask_container} key="flowerpot" transition={{ type: "spring" }}>
         <Image src={flowerpotbg} className={classNames(style.mask_container__flowerpot, seed ? style.mask_container__animate : null)} alt="flowerpot" onClick={(e) => handleFlowerPotClick()}/>
       </motion.div>
-      </div>
+      </motion.div>
       </AnimatePresence>
 
       <motion.div className={style.main__text} whileTap={{

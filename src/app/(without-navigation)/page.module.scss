@@ -85,6 +85,7 @@
 .arrow_container {
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   &__arrow {
     position: absolute;

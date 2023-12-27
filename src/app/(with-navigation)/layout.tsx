@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import 'src/app/globals.scss'
-import Navbar from '../components/Navbar/Navbar'
+import { Barlow } from 'next/font/google'
+import 'src/app/globals.scss';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
 
-const inter = Inter({ subsets: ['latin'] })
+const barlow = Barlow({ 
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  style: ['italic', 'normal']
+})
 
 export const metadata: Metadata = {
   title: 'VibbySite',
@@ -17,9 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={barlow.className}>
         <Navbar />
         {children}
+        <Footer />
         </body>
     </html>
   )
