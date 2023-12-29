@@ -3,7 +3,7 @@
 .container {
     display: grid;
     grid-template-columns: 27rem auto;
-    overflow: auto;
+    // overflow: auto;
     margin-top: 3rem;
 }
 
@@ -48,23 +48,23 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0rem 2rem 0rem 2rem;
-    // padding: 2rem 2rem 0rem 2rem;
-    margin: 0rem 6rem 5rem 0rem;
+    // padding: 0rem 2rem 0rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: 0rem 3rem 5rem 0rem;
     height: 36rem;
-    border-radius: 10px;
-    overflow-y: scroll;
+    // border-radius: 10px;
+    // overflow-y: scroll;
+    // overflow-x:hidden;
+    // border-style:groove;
+    // border-color: #F7DFC3;
     // background-color: #F7DFC3;
-    // filter: drop-shadow(5px 5px 10px rgba(121, 116, 116, 0.50));
 
     &__text {
         font-weight: 400;
         line-height: 1.15;
         background-color: $color-bg;
         padding: 0rem;
-        // padding: 2rem;
         border-radius: 10px;
-        // filter: drop-shadow(5px 5px 10px rgba(121, 116, 116, 0.50));
 
         &__compsci {
             font-weight: 700;

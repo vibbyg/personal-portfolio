@@ -33,7 +33,7 @@ function Footer() {
     ]
     return (
         <div className={style.footer}>
-            <p>Built by Vibhor Gautam</p>
+            <p>Built by Vibhor Gautam 🤠</p>
             <nav>
                 <ul className={style.items}>
                     {socials.map(({name, url, id}) => {

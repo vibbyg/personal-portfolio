@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     color: $color-text-homepage;
     padding: 1.2rem 2rem 1rem 2rem;
     gap: 2rem;

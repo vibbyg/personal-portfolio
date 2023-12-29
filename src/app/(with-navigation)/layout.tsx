@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
 import 'src/app/globals.scss';
+import style from './layout.module.scss';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={barlow.className}>
+        <div className={style.container}>
         <Navbar />
         {children}
         <Footer />
+        </div>
         </body>
     </html>
   )

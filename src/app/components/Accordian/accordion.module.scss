@@ -1,0 +1,20 @@
+@import '../../../../styles/variables.scss';
+
+.header {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1.4rem;
+  }
+
+.container {
+    width: 40rem;
+    height: 2.5rem;
+}
+
+.section {
+  padding: 0rem 0rem 0rem 1rem;
+}

@@ -9,8 +9,9 @@ import LinkedinLogo from "../../../../public/assets/LinkedinLogo";
 import YoutubeLogo from "../../../../public/assets/YoutubeLogo";
 import Link from "next/link";
 import { animate, motion } from 'framer-motion';
-import Accordian from "../../components/Accordian/Accordian";
+// import Accordion from "../../components/Accordian/Accordion";
 import classNames from "classnames";
+import finances from "../../../../public/assets/finances2023_sankey.svg";
 
 function About() {
     const router = useRouter();
@@ -45,20 +46,28 @@ function About() {
             </div>
             <div className={style.content}>
                 <h3 className={classNames(style.content__text)}>
-                    I’m Vibhor, a 3rd-year <span className={style.content__text__compsci}>Computer Science</span> student at the University of Waterloo. 
+                    I’m Vibhor, a 3rd-year <span className={style.content__text__compsci}>Computer Science</span> student at the University of Waterloo.
+                    Currently, I'm working as a <span style={{textDecoration: 'underline', fontWeight: 500}}>Software Developer Intern</span> @ <span style={{textDecoration: 'underline', fontWeight: 500}}>KindWorks.AI</span>.
+                    <br />
                     <br />
                     I enjoy <span className={style.content__text__creating}>creating</span> things - creating <span className={style.videos}>videos</span>, 
                     creating <span className={style.projects}>projects</span>, and most importantly, creating <span className={style.experiences}>experiences</span>.
-                    <br />
                 </h3>
                 <br />
                 <br />
                 <h3 className={style.content__text}>
                     Click below for random fun facts about me:
                 </h3>
-                <Accordian>
-                    Testin
-                </Accordian>
+                <br />
+                {/* <Accordion header="Shower thoughts that keep me in the shower">
+                    <h4>🤨  How does a microwave heat up my leftover pizza? </h4>
+                    <br />
+                    <h4>🧐  Why does 3 am feel more like the middle of the night than midnight?</h4>
+                    <br />
+                    <h4>🤔  What are snails even trying to do</h4>
+                </Accordion> */}
+                <br />
+                {/* <Image src={finances} alt="finances"/> */}
             </div>
         </div>
     )
