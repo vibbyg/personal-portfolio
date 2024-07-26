@@ -3,7 +3,7 @@ import style from './main.module.scss';
 function Main() {
     return (
         <div>
-            Test
+            Test Again
         </div>
     )
 }
