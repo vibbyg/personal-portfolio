@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Hammersmith_One } from "next/font/google";
+import { Sarabun } from "next/font/google";
 import "./globals.css";
 
 const hammersmith = Hammersmith_One({ subsets: ['latin'], weight: ['400'] });
+const sarabun = Sarabun({ subsets: ['latin'], weight: ['400'] });
+
 
 export const metadata: Metadata = {
   title: "VibbySite",

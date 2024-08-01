@@ -1,21 +1,47 @@
-import React, { CSSProperties, useRef } from "react"
+import React, { CSSProperties } from "react"
+import { blue, purple, green } from "../_utils/colors"
+
 
 interface Hole {
   onHoleClick?: (event: any) => void,
+  offsetTop?: number,
+  offsetLeft?: number,
+  color?: string
 }
 
-export const Hole = ({onHoleClick}: Hole) => {
+export const Hole = ({onHoleClick, offsetLeft, offsetTop, color}: Hole) => {
   const HoleStyle: CSSProperties = {
-    position: 'relative',
+    position: 'fixed',
+    left: `${offsetLeft}%` || `${Math.floor(Math.random() * 12)}px`,
+    top: `${offsetTop}%` || `${Math.floor(Math.random() * 12)}px`,
     margin: '2rem',
-    top: `${Math.floor(Math.random() * 10)}rem`,
-    left: `${Math.floor(Math.random() * 10)}rem`,
-    transform: 'translate(-50%, -50%)'
   };
   return (
-    <div style={HoleStyle} onClick={onHoleClick}>
-      <svg width="87" height="13" viewBox="0 0 87 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="43.5" cy="6.5" rx="43.5" ry="6.5" fill="#D9D9D9"/>
+    <div style={HoleStyle} className="md:scale-150 hover:cursor-pointer md:hover:animate-wobbling z-10" onClick={onHoleClick}>
+      <svg width="87" height="13" viewBox="0 0 87 13" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-xl backdrop-blur-sm">
+        <defs>
+          <linearGradient id="LightGradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stopColor="#FFFFFF" />
+            <stop offset="100%" stopColor="#F080F0" />
+          </linearGradient>
+          <linearGradient id="DarkGradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stopColor="#F080F0" />
+            <stop offset="100%" stopColor="#FFFFFF" />
+          </linearGradient>
+          <linearGradient id="greenGradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stopColor={green.light}/>
+            <stop offset="100%" stopColor={green.DEFAULT} />
+          </linearGradient>
+          <linearGradient id="purpleGradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stopColor={purple.light} />
+            <stop offset="100%" stopColor={purple.DEFAULT} />
+          </linearGradient>
+          <linearGradient id="blueGradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stopColor={blue.light} />
+            <stop offset="100%" stopColor={blue.DEFAULT} />
+          </linearGradient>
+        </defs>
+        <ellipse cx="43.5" cy="6.5" rx="43.5" ry="6.5" fill={`url(#${color ?? "purple"}Gradient)`}/>
       </svg>
     </div>
   )
