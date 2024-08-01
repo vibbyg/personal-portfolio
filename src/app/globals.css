@@ -9,7 +9,8 @@
 }
 
 body {
-  background-color: #FFFFF8;
+  background: linear-gradient(to right,#FFFFF8 0%, #FFF0F0 100%);
+  color: #493459
 }
 
 @layer utilities {
@@ -17,3 +18,4 @@ body {
     text-wrap: balance;
   }
 }
+

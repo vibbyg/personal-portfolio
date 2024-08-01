@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply w-7/12 h-3/6 border-solid border-4 rounded-lg fixed p-4 m-8 z-50 shadow-2xl
+  }
+  .card-h2 {
+      @apply lg:text-3xl m-2 flex justify-start
+  }
+
+  .card-blue {
+    .back {
+      @apply card bg-blue-dark;
+    }
+    .front {
+      @apply card bg-blue
+    }
+    .center {
+      @apply card bg-blue-light flex flex-col overflow-scroll
+    }
+
+    h2 {
+      @apply card-h2 text-blue
+    }
+  }
+
+  .card-purple {
+    .back {
+      @apply card bg-purple-dark;
+    }
+    .front {
+      @apply card bg-purple
+    }
+    .center {
+      @apply card bg-purple-light flex flex-col overflow-scroll
+    }
+
+    h2 {
+      @apply card-h2 text-purple
+    }
+  }
+
+  .card-green {
+    .back {
+      @apply card bg-green-dark;
+    }
+    .front {
+      @apply card bg-green
+    }
+    .center {
+      @apply card bg-green-light flex flex-col overflow-scroll
+    }
+
+    h2 {
+      @apply card-h2 text-green
+    }
+  }
+}
