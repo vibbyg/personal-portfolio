@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import { Hole } from "./Hole"
-import { Card } from "./Card/Card";
+import { AboutCard } from "./AboutCard";
 
 const getRandomPosition = (maxWidth: number, maxHeight: number, sizeWidth: number, sizeHeight: number) => {
   const positionX = Math.floor(Math.random() * (maxWidth/1.75 - sizeWidth) * 100 / maxWidth);
@@ -48,7 +48,7 @@ export const Holes = () => {
         {
           open.map((elem: any, index: number) => {
             return (
-              <Card key={index} open={elem.bool} color={elem.color} title={"who am i?"} onCardClick={() => {
+              <AboutCard key={index} open={elem.bool} color={elem.color} title={"who am i?"} onCardClick={() => {
                 console.log('elem', elem)
                 const newOpen = open.map((val: any) => val.key === elem.key ? {key: elem.key, color: elem.color, bool: !elem.bool} : val)
                 setOpen(newOpen)
