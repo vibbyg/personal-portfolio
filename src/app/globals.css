@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 :root {
+  --blue-default: #697CBF;
+  --blue-light: #F7F9FF;
+  --blue-dark: #24305A;
+
+  --purple-default: #BF69B6;
+  --purple-light: #FFF7FE;
+  --purple-dark: #55245A;
+
+  --green-default: #69BF72;
+  --green-light: #F7FFF7;
+  --green-dark: #2F5A24;
 }
 
 @media (prefers-color-scheme: light) {

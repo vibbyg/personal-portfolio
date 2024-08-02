@@ -20,19 +20,19 @@ const config: Config = {
     },
     colors: {
       blue: {
-        DEFAULT: '#697CBF',
-        light: '#F7F9FF',
-        dark: '#24305A'
+        DEFAULT: 'var(--blue-default)',
+        light: 'var(--blue-light)',
+        dark: 'var(--blue-dark)'
       },
       purple: {
-        DEFAULT: '#BF69B6',
-        light: '#FFF7FE',
-        dark: '#55245A'
+        DEFAULT: 'var(--purple-default)',
+        light: 'var(--purple-light)',
+        dark: 'var(--purple-dark)'
       },
       green: {
-        DEFAULT: '#69BF72',
-        light: '#F7FFF7',
-        dark: '#2F5A24'
+        DEFAULT: 'var(--green-default)',
+        light: 'var(--green-light)',
+        dark: 'var(--green-dark)'
       }
     },
     keyframes: {

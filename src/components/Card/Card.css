@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+@layer utilities {
   .card {
-    @apply w-7/12 h-3/6 border-solid border-4 rounded-lg fixed p-4 m-8 z-50 shadow-2xl
+    transition: 0.5s;
+    @apply w-8/12 h-4/6 border-solid border-4 rounded-lg fixed p-6 z-50 shadow-2xl cursor-pointer
   }
   .card-h2 {
-      @apply lg:text-3xl m-2 flex justify-start
+      @apply lg:text-4xl sm:text-2xl m-2 flex justify-start
   }
 
   .card-blue {
@@ -18,11 +19,28 @@
       @apply card bg-blue
     }
     .center {
-      @apply card bg-blue-light flex flex-col overflow-scroll
+      scrollbar-color: var(--blue-default) var(--blue-default);
+      @apply card bg-blue-light flex flex-col
     }
 
     h2 {
       @apply card-h2 text-blue
+    }
+  }
+  
+  .card-blue:hover {
+    .back {
+      @apply card bg-blue;
+    }
+    .front {
+      @apply card bg-blue-dark
+    }
+    .center {
+      @apply card bg-blue-light flex flex-col overflow-scroll
+    }
+
+    h2 {
+      @apply card-h2 text-blue-dark
     }
   }
 
@@ -34,11 +52,27 @@
       @apply card bg-purple
     }
     .center {
+      scrollbar-color: var(--purple-default) var(--purple-default);
       @apply card bg-purple-light flex flex-col overflow-scroll
     }
 
     h2 {
       @apply card-h2 text-purple
+    }
+  }
+  .card-purple:hover {
+    .back {
+      @apply card bg-purple;
+    }
+    .front {
+      @apply card bg-purple-dark
+    }
+    .center {
+      @apply card bg-purple-light flex flex-col overflow-scroll
+    }
+
+    h2 {
+      @apply card-h2 text-purple-dark
     }
   }
 
@@ -50,11 +84,28 @@
       @apply card bg-green
     }
     .center {
-      @apply card bg-green-light flex flex-col overflow-scroll
+      scrollbar-color: var(--green-default) var(--green-default);
+      @apply card bg-green-light flex flex-col overflow-scroll p-4
     }
 
     h2 {
       @apply card-h2 text-green
+    }
+  }
+
+  .card-green:hover {
+    .back {
+      @apply card bg-green;
+    }
+    .front {
+      @apply card bg-green-dark
+    }
+    .center {
+      @apply card bg-green-light flex flex-col overflow-scroll
+    }
+
+    h2 {
+      @apply card-h2 text-green-dark
     }
   }
 }
