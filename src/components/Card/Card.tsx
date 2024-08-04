@@ -1,7 +1,5 @@
 import { ReactNode } from "react"
 import './Card.css'
-import me from './../../../public/assets/me.jpg'
-import Image from "next/image"
 import { ArrowRight } from "../ArrowRight"
 interface Card {
   color: string,
@@ -18,18 +16,15 @@ export const Card = ({ title, link, children, open, color, onCardClick }: Card) 
       (<div>
         <div className={`card-${color}`}>
           <div
-            className="back"
-            style={{ top: `20vh`, left: `16vw` }}
+            className="back back-size"
           >
           </div>
           <div
-            className="front"
-            style={{ top: `12vh`, left: `20vw` }}
+            className="front front-size"
           >
           </div>
           <div
-            className="center fixed overflow-hidden flex flex-col justify-between"
-            style={{ top: `16vh`, left: `18vw` }}
+            className="center center-size fixed overflow-hidden flex flex-col justify-between"
           >
             <h2>
               {title ?? "FILL ME IN!"}
@@ -37,7 +32,7 @@ export const Card = ({ title, link, children, open, color, onCardClick }: Card) 
             <div className="overflow-scroll pr-4">
               {children ?? 'nothing to see here...'}
             </div>
-            <h3 className="self-end scale-75"><ArrowRight /></h3>
+            <h3 className="self-end -mb-2 mt-2"><ArrowRight color={color} /></h3>
           </div>
         </div>
         <div className="w-screen h-screen z-40 backdrop-brightness-90 backdrop-blur-sm relative" onClick={onCardClick} />

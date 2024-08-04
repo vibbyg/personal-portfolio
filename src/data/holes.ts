@@ -7,9 +7,9 @@ export const previewData = [
   },
   {
     id: 2,
-    title: 'experience',
+    title: 'work experience',
     link: 'experience',
-    color: 'green',
+    color: 'purple',
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const previewData = [
     id: 4,
     title: 'snaps by me',
     link: 'photography',
-    color: 'purple',
+    color: 'green',
   },
   {
     id: 5,
