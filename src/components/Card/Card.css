@@ -5,10 +5,50 @@
 @layer utilities {
   .card {
     transition: 0.5s;
-    @apply w-8/12 h-4/6 border-solid border-4 rounded-lg fixed p-6 z-50 shadow-2xl cursor-pointer
+    @media (orientation: portrait) {
+      height: 50%;
+      width: 75%;
+      
+    }
+    @media (orientation: landscape) {
+      height: 66%;
+      width: 66%;
+      
+    }
+    @apply border-solid border-4 rounded-lg fixed p-6 z-50 shadow-2xl cursor-pointer border-stone-900
   }
   .card-h2 {
-      @apply lg:text-4xl sm:text-2xl m-2 flex justify-start
+      @apply md:text-4xl text-2xl m-2 flex justify-start
+  }
+
+  .back-size {
+    top: 20vh;
+    left: 16vw;
+
+    @media (orientation: portrait) {
+      top: 26vh;
+      left: 9.5vw;
+    }
+  }
+
+  .front-size {
+    top: 12vh;
+    left: 20vw;
+
+    @media (orientation: portrait) {
+      top: 22vh;
+      left: 17.5vw;
+    }
+  }
+
+  .center-size {
+    top: 16vh;
+    left: 18vw;
+
+    @media (orientation: portrait) {
+      top: 24vh;
+      left: 13vw;
+    }
   }
 
   .card-blue {
@@ -16,7 +56,7 @@
       @apply card bg-blue-dark;
     }
     .front {
-      @apply card bg-blue
+      @apply card bg-blue;
     }
     .center {
       scrollbar-color: var(--blue-default) var(--blue-default);

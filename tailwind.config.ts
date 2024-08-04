@@ -13,27 +13,27 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        blue: {
+          DEFAULT: 'var(--blue-default)',
+          light: 'var(--blue-light)',
+          dark: 'var(--blue-dark)'
+        },
+        purple: {
+          DEFAULT: 'var(--purple-default)',
+          light: 'var(--purple-light)',
+          dark: 'var(--purple-dark)'
+        },
+        green: {
+          DEFAULT: 'var(--green-default)',
+          light: 'var(--green-light)',
+          dark: 'var(--green-dark)'
+        }
+      },
     },
     fontFamily: {
       'display': ['Hammersmith_One'],
       'body': ['"Open Sans"']
-    },
-    colors: {
-      blue: {
-        DEFAULT: 'var(--blue-default)',
-        light: 'var(--blue-light)',
-        dark: 'var(--blue-dark)'
-      },
-      purple: {
-        DEFAULT: 'var(--purple-default)',
-        light: 'var(--purple-light)',
-        dark: 'var(--purple-dark)'
-      },
-      green: {
-        DEFAULT: 'var(--green-default)',
-        light: 'var(--green-light)',
-        dark: 'var(--green-dark)'
-      }
     },
     keyframes: {
       wobble: {
