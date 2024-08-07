@@ -1,70 +1,55 @@
-.glow {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 24px #fff,      /* inner white */
-    inset 10px 0 40px #f0f,   /* inner left magenta short */
-    inset -10px 0 40px #0ff,  /* inner right cyan short */
-    inset 10px 0 150px #f0f,  /* inner left magenta broad */
-    inset -10px 0 150px #0ff, /* inner right cyan broad */
-    0 0 24px #fff,            /* outer white */
-    -5px 0 40px #f0f,        /* outer left magenta */
-    5px 0 40px #0ff;         /* outer right cyan */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.blue-hole {
-  animation-name: breathing;
-  animation-iteration-count: infinite;
-  animation-duration: 7s;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 24px #fff,      /* inner white */
-    inset 10px 0 40px var(--blue-light),   /* inner left magenta short */
-    inset -10px 0 40px var(--blue-default),  /* inner right cyan short */
-    inset 10px 0 150px var(--blue-light),  /* inner left magenta broad */
-    inset -10px 0 150px var(--blue-default), /* inner right cyan broad */
-    0 0 24px #fff,            /* outer white */
-    -5px 0 40px var(--blue-light),        /* outer left magenta */
-    5px 0 40px var(--blue-default);         /* outer right cyan */
-}
+@layer utilities {
+  .hole {
+    animation-name: breathing;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
 
-.green-hole {
-  animation-name: breathing;
-  animation-iteration-count: infinite;
-  animation-duration: 6s;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 24px #fff,      /* inner white */
-    inset 10px 0 40px var(--green-light),   /* inner left magenta short */
-    inset -10px 0 40px var(--green-default),  /* inner right cyan short */
-    inset 10px 0 150px var(--green-light),  /* inner left magenta broad */
-    inset -10px 0 150px var(--green-default), /* inner right cyan broad */
-    0 0 24px #fff,            /* outer white */
-    -5px 0 40px var(--green-light),        /* outer left magenta */
-    5px 0 40px var(--green-default);         /* outer right cyan */
-}
+  .blue {
+    animation-duration: 7s;
+    box-shadow:
+    inset 0 0 24px #fff,
+    inset 10px 0 40px var(--blue-light),
+    inset -10px 0 40px var(--blue-default),
+    inset 10px 0 150px var(--blue-light),
+    inset -10px 0 150px var(--blue-default),
+    0 0 24px #fff,
+    -5px 0 40px var(--blue-light),
+    5px 0 40px var(--blue-default);
+  }
 
-.purple-hole {
-  animation-name: breathing;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 24px #fff,      /* inner white */
-    inset 10px 0 40px var(--purple-light),   /* inner left magenta short */
-    inset -10px 0 40px var(--purple-default),  /* inner right cyan short */
-    inset 10px 0 150px var(--purple-light),  /* inner left magenta broad */
-    inset -10px 0 150px var(--purple-default), /* inner right cyan broad */
-    0 0 24px #fff,            /* outer white */
-    -5px 0 40px var(--purple-light),        /* outer left magenta */
-    5px 0 40px var(--purple-default);         /* outer right cyan */
+  .green {
+    animation-duration: 6s;
+    box-shadow:
+    inset 0 0 24px #fff,
+    inset 10px 0 40px var(--green-light),
+    inset -10px 0 40px var(--green-default),
+    inset 10px 0 150px var(--green-light),
+    inset -10px 0 150px var(--green-default),
+    0 0 24px #fff,
+    -5px 0 40px var(--green-light),
+    5px 0 40px var(--green-default);
+  }
+
+  .purple {
+    animation-duration: 5s;
+    box-shadow:
+    inset 0 0 24px #fff,
+    inset 10px 0 40px var(--purple-light),
+    inset -10px 0 40px var(--purple-default),
+    inset 10px 0 150px var(--purple-light),
+    inset -10px 0 150px var(--purple-default),
+    0 0 24px #fff,
+    -5px 0 40px var(--purple-light),
+    5px 0 40px var(--purple-default);
+  }
 }
 
 @keyframes breathing {

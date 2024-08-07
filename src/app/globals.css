@@ -14,15 +14,22 @@
   --green-default: #69BF72;
   --green-light: #F7FFF7;
   --green-dark: #2F5A24;
+
+  --bg-gradient-l: #FFFFF8;
+  --bg-gradient-r: #fad0d0;
+  /* BA7E7E */
 }
 
 @media (prefers-color-scheme: light) {
 }
 
-body {
-  background: linear-gradient(to right,#FFFFF8 0%, #FFF0F0 100%);
-  color: #493459
+@layer components {
+  body {
+    color: #493459;
+    @apply bg-gradient-to-r from-[var(--bg-gradient-l)] to-[var(--bg-gradient-r)]
+  }
 }
+
 
 @layer utilities {
   .text-balance {
