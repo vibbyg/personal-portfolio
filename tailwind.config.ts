@@ -28,6 +28,10 @@ const config: Config = {
           DEFAULT: 'var(--green-default)',
           light: 'var(--green-light)',
           dark: 'var(--green-dark)'
+        },
+        background: {
+          left: 'var(--bg-gradient-l)',
+          right: 'var(--bg-gradient-r)'
         }
       },
     },
@@ -61,9 +65,17 @@ const config: Config = {
           transform: 'translateX(calc(-16px / 5.5)) rotate(calc(-5deg / 5)) scale(1.5)',
       },
       },
+      breathing: {
+        '0%, 100%': {
+          transform: 'scale(0.85)'
+        },
+        '50%': {
+          transform: 'scale(1.15)'
+        }
+      }
     },
     animation: {
-      'wobbling': 'wobble 2s linear 1'
+      'wobbling': 'wobble 2s ease-in-out 1'
     }
   },
   plugins: [],
