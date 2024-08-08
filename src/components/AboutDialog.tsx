@@ -20,7 +20,7 @@ export const AboutDialog = ({title, link, color, onDialogClick, open}: AboutDial
           <h3 className="md:text-xl lg:text-2xl">Come and take a peek into my mind. If you like what you see, you can find more <a href="https://www.instagram.com/vibbyridge" target="_blank" className="italic hover:underline cursor-pointer text-blue">here</a>, <a href="https://github.com/vibbyg" target="_blank" className="italic hover:underline cursor-pointer text-green">here</a>, and <a href="https://www.youtube.com/channel/UCaokqBc5dglz6RnbFvmxclA" target="_blank" className="italic hover:underline cursor-pointer text-purple">here</a>.</h3>
 
         </div>
-        <Image src={me} width={me.width} height={me.width} alt="me lol" className={`max-w-52 ml-2 rounded-lg border-4 border-solid border-${color}`}/>
+        <Image src={me} width={me.width} height={me.width} alt="me lol" className={`max-w-64 max-h-80 ml-2 rounded-lg border-4 border-solid border-${color} object-cover`}/>
       </div>
     </Dialog>
   )

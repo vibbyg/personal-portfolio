@@ -19,7 +19,7 @@ export const Hole = ({onHoleClick, offsetLeft, offsetTop, color, position}: Hole
   
   return (
     <div style={HoleStyle} className={`md:scale-150 hover:cursor-pointer md:hover:animate-wobbling z-10 ${position || 'fixed'}`} onClick={onHoleClick}>
-      <div className={`hole ${color}`}>
+      <div className={`hole ${color ?? "default"}`}>
       </div>
     </div>
   )
