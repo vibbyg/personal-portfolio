@@ -13,26 +13,20 @@ export const previewData = [
   },
   {
     id: 3,
-    title: 'past projects',
+    title: 'projects',
     link: 'projects',
-    color: 'blue',
+    color: 'green',
   },
   {
     id: 4,
     title: 'snaps by me',
     link: 'photography',
-    color: 'green',
+    color: 'blue',
   },
   {
     id: 5,
     title: 'my mind',
     link: 'blog',
-    color: 'blue',
-  },
-  {
-    id: 6,
-    title: 'want to connect? :)',
-    link: 'connect',
-    color: 'green',
+    color: 'default',
   }
 ]

@@ -1,5 +1,4 @@
 import { Dialog } from "./Dialog/Dialog";
-import Image from "next/image";
 import { experienceData } from "@/data/experience";
 import { Card } from "./Card/Card";
 

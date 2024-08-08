@@ -1,6 +1,4 @@
 import { Dialog } from "./Dialog/Dialog";
-import Image from "next/image";
-import { experienceData } from "@/data/experience";
 import { Card } from "./Card/Card";
 import { projectsData } from "@/data/projects";
 
@@ -30,6 +28,7 @@ export const ProjectsDialog = ({title, link, color, onDialogClick, open}: Projec
               description={project.description.toLowerCase()}
               photo={project.logo}
               color={color}
+              link={project.link}
               />
           )})
         }
