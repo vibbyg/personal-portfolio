@@ -15,7 +15,7 @@
       width: 66%;
       
     }
-    @apply border-solid border-4 rounded-lg fixed p-6 z-50 shadow-2xl cursor-pointer border-stone-900
+    @apply border-solid border-4 rounded-lg fixed p-6 z-50 shadow-2xl border-stone-900
   }
   .dialog-h2 {
       @apply md:text-4xl text-2xl m-2 flex justify-start

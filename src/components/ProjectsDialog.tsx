@@ -29,7 +29,6 @@ export const ProjectsDialog = ({title, link, color, onDialogClick, open}: Projec
               timeline={`${project.start.toLowerCase()}`}
               description={project.description.toLowerCase()}
               photo={project.logo}
-              custom={`bg-background-left hover:bg-${color}`}
               color={color}
               />
           )})

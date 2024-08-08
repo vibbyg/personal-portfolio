@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .nexthole {
   width: 50px;
   height: 50px;
@@ -38,5 +42,19 @@
       -3px 0 20px var(--green-light),
       3px 0 20px var(--green-default);
   }
+}
 
+@layer components {
+  .card {
+    @apply flex flex-col md:flex-row border border-solid gap-3 p-8 md:divide-x rounded-lg drop-shadow-xl hover:cursor-pointer bg-background-left;
+  }
+  .card-blue {
+    @apply hover:bg-blue hover:text-blue-light duration-300
+  }
+  .card-green {
+    @apply hover:bg-green hover:text-green-light duration-300
+  }
+  .card-purple {
+    @apply hover:bg-purple hover:text-purple-light duration-300
+  }
 }
