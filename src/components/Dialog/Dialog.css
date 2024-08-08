@@ -60,7 +60,7 @@
     }
     .center {
       scrollbar-color: var(--blue-default) var(--blue-default);
-      @apply dialog bg-gradient-to-r from-blue-light to-background-right
+      @apply dialog bg-gradient-to-r from-blue-light to-background-left
     }
 
     h2 {

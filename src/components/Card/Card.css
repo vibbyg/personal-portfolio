@@ -2,13 +2,41 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow:
-  inset 0 0 12px #fff,
-  inset 5px 0 20px var(--purple-light),
-  inset -5px 0 20px var(--purple-default),
-  inset 5px 0 75px var(--purple-light),
-  inset -5px 0 75px var(--purple-default),
-  0 0 12px #fff,
-  -3px 0 20px var(--purple-light),
-  3px 0 20px var(--purple-default);
+
+  .purple {
+    box-shadow:
+      inset 0 0 12px #fff,
+      inset 5px 0 20px var(--purple-light),
+      inset -5px 0 20px var(--purple-default),
+      inset 5px 0 75px var(--purple-light),
+      inset -5px 0 75px var(--purple-default),
+      0 0 12px #fff,
+      -3px 0 20px var(--purple-light),
+      3px 0 20px var(--purple-default);
+  }
+
+  .blue {
+    box-shadow:
+      inset 0 0 12px #fff,
+      inset 5px 0 20px var(--blue-light),
+      inset -5px 0 20px var(--blue-default),
+      inset 5px 0 75px var(--blue-light),
+      inset -5px 0 75px var(--blue-default),
+      0 0 12px #fff,
+      -3px 0 20px var(--blue-light),
+      3px 0 20px var(--blue-default);
+  }
+
+  .green {
+    box-shadow:
+      inset 0 0 12px #fff,
+      inset 5px 0 20px var(--green-light),
+      inset -5px 0 20px var(--green-default),
+      inset 5px 0 75px var(--green-light),
+      inset -5px 0 75px var(--green-default),
+      0 0 12px #fff,
+      -3px 0 20px var(--green-light),
+      3px 0 20px var(--green-default);
+  }
+
 }

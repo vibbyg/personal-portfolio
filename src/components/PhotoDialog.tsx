@@ -27,7 +27,7 @@ export const PhotoDialog = ({title, link, color, onDialogClick, open}: PhotoDial
           previewImages.map((image, index) => {
             return (
               <Image key={index} src={image} width={image.width} height={image.height} alt={`${image.blurDataURL} lol`} 
-              className={`max-w-52  border-4 border-solid border-${color}`} />
+              className={`max-w-52  border-4 border-solid border-stone-500 drop-shadow-lg`} />
             )
           })
         }

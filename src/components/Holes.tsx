@@ -5,6 +5,7 @@ import { AboutDialog } from "./AboutDialog";
 import { PhotoDialog } from "./PhotoDialog";
 import { previewData } from "@/data/holes";
 import { ExperienceDialog } from "./ExperienceDialog";
+import { ProjectsDialog } from "./ProjectsDialog";
 
 const getRandomPosition = (maxWidth: number, maxHeight: number, sizeWidth: number, sizeHeight: number) => {
   const positionX = Math.floor(Math.random() * (maxWidth / 1.15 - sizeWidth) * 100 / maxWidth);
@@ -65,6 +66,12 @@ export const Holes = () => {
           )
           : open.link == "experience" ?
           (<ExperienceDialog key={open.id} open={!!open} color={open.color} title={open.title} onDialogClick={() => {
+            setOpen({} as PreviewData)
+          }} 
+            />
+          )
+          : open.link == "projects" ?
+          (<ProjectsDialog key={open.id} open={!!open} color={open.color} title={open.title} onDialogClick={() => {
             setOpen({} as PreviewData)
           }} 
             />

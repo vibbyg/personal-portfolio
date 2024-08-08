@@ -26,7 +26,7 @@
 @layer components {
   body {
     color: #493459;
-    @apply bg-gradient-to-r from-[var(--bg-gradient-l)] to-[var(--bg-gradient-r)]
+    @apply bg-gradient-to-r from-[var(--bg-gradient-l)] to-[var(--bg-gradient-r)] cursor-cell;
   }
 }
 
