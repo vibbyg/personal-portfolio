@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --blue-default: #697CBF;
   --blue-light: #F7F9FF;
@@ -20,20 +16,10 @@
   /* BA7E7E */
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {}
+
+body {
+  color: #493459;
+  background: linear-gradient(to right, var(--bg-gradient-l), var(--bg-gradient-r));
+  cursor: cell;
 }
-
-@layer components {
-  body {
-    color: #493459;
-    @apply bg-gradient-to-r from-[var(--bg-gradient-l)] to-[var(--bg-gradient-r)] cursor-cell;
-  }
-}
-
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-

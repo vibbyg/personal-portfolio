@@ -28,7 +28,6 @@ export const ExperienceDialog = ({title, link, color, onDialogClick, open}: Expe
               subtitle={experience.position.toLowerCase()} 
               timeline={`${experience.start.toLowerCase()} - ${experience.end.toLowerCase()}`}
               photo={experience.logo}
-              custom={`bg-background-left hover:bg-${color} `}
               color={color}
               />
           )})
