@@ -22,4 +22,5 @@ body {
   color: #493459;
   background: linear-gradient(to right, var(--bg-gradient-l), var(--bg-gradient-r));
   cursor: cell;
+  height: 100%;
 }
