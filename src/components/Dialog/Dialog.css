@@ -6,13 +6,13 @@
   .dialog {
     transition: 0.5s;
     @media (orientation: portrait) {
-      height: 50%;
-      width: 75%;
+      height: 50vh;
+      width: 75vw;
       
     }
     @media (orientation: landscape) {
-      height: 66%;
-      width: 66%;
+      height: 66vh;
+      width: 66vw;
       
     }
     @apply border-solid border-4 rounded-lg fixed p-6 z-50 shadow-2xl border-stone-900
