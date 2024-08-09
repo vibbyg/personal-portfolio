@@ -19,9 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta content="width=device-width, initial-scale=1">
+      <meta content="width=device-width, initial-scale=1" />
       <body className={hammersmith.className}>{children}</body>
-      </meta>
     </html>
   );
 }
