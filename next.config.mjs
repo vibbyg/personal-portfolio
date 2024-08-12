@@ -15,7 +15,8 @@ const nextConfig = {
       pathname: '/photos/production/software_photos/**'
     }
   ],
-  }
+  },
+  output: 'export'
 };
 
 export default nextConfig;
