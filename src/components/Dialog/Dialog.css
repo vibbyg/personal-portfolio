@@ -7,7 +7,7 @@
     transition: 0.5s;
 
     @media screen and (orientation: portrait) {
-      height: 50dvh;
+      height: 60dvh;
       width: 75vw;
 
     }
@@ -32,7 +32,7 @@
     left: 16vw;
   
     @media screen and (orientation: portrait) {
-      top: 26dvh;
+      top: 21dvh;
       left: 9.5vw;
     }
   }
@@ -42,7 +42,7 @@
     left: 20vw;
   
     @media screen and (orientation: portrait) {
-      top: 22dvh;
+      top: 17dvh;
       left: 17.5vw;
     }
   }
@@ -52,10 +52,11 @@
     left: 18vw;
   
     @media screen and (orientation: portrait) {
-      top: 24dvh;
+      top: 19dvh;
       left: 13vw;
     }
   }
+}
   
   .dialog-blue {
     .back {
@@ -167,4 +168,3 @@
       @apply text-green-dark
     }
   }
-}
