@@ -23,4 +23,6 @@ body {
   background: linear-gradient(to right, var(--bg-gradient-l), var(--bg-gradient-r));
   cursor: cell;
   height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
