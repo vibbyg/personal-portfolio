@@ -26,143 +26,145 @@
   }
 }
 
-.back-size {
-  top: 20vh;
-  left: 16vw;
-
-  @media screen and (orientation: portrait) {
-    top: 26vh;
-    left: 9.5vw;
+@layer components {
+  .back-size {
+    top: 20vh;
+    left: 16vw;
+  
+    @media screen and (orientation: portrait) {
+      top: 26vh;
+      left: 9.5vw;
+    }
   }
-}
-
-.front-size {
-  top: 12vh;
-  left: 20vw;
-
-  @media screen and (orientation: portrait) {
-    top: 22vh;
-    left: 17.5vw;
+  
+  .front-size {
+    top: 12vh;
+    left: 20vw;
+  
+    @media screen and (orientation: portrait) {
+      top: 22vh;
+      left: 17.5vw;
+    }
   }
-}
-
-.center-size {
-  top: 16vh;
-  left: 18vw;
-
-  @media screen and (orientation: portrait) {
-    top: 24vh;
-    left: 13vw;
+  
+  .center-size {
+    top: 16vh;
+    left: 18vw;
+  
+    @media screen and (orientation: portrait) {
+      top: 24vh;
+      left: 13vw;
+    }
   }
-}
-
-.dialog-blue {
-  .back {
-    @apply bg-blue-dark;
+  
+  .dialog-blue {
+    .back {
+      @apply bg-blue-dark;
+    }
+  
+    .front {
+      @apply bg-blue;
+    }
+  
+    .center {
+      scrollbar-color: var(--blue-default) var(--blue-default);
+      @apply bg-gradient-to-r from-blue-light to-background-left
+    }
+  
+    h2 {
+      @apply text-blue
+    }
   }
-
-  .front {
-    @apply bg-blue;
+  
+  .dialog-blue:hover {
+    .back {
+      @apply bg-blue;
+    }
+  
+    .front {
+      @apply bg-blue-dark
+    }
+  
+    .center {
+      @apply bg-gradient-to-l from-blue-light to-background-left
+    }
+  
+    h2 {
+      @apply text-blue-dark
+    }
   }
-
-  .center {
-    scrollbar-color: var(--blue-default) var(--blue-default);
-    @apply bg-gradient-to-r from-blue-light to-background-left
+  
+  .dialog-purple {
+    .back {
+      @apply bg-purple-dark;
+    }
+  
+    .front {
+      @apply bg-purple
+    }
+  
+    .center {
+      scrollbar-color: var(--purple-default) var(--purple-default);
+      @apply bg-gradient-to-r from-purple-light to-background-left
+    }
+  
+    h2 {
+      @apply text-purple
+    }
   }
-
-  h2 {
-    @apply text-blue
+  
+  .dialog-purple:hover {
+    .back {
+      @apply bg-purple;
+    }
+  
+    .front {
+      @apply bg-purple-dark
+    }
+  
+    .center {
+      @apply bg-gradient-to-l from-purple-light to-background-left
+    }
+  
+    h2 {
+      @apply text-purple-dark
+    }
   }
-}
-
-.dialog-blue:hover {
-  .back {
-    @apply bg-blue;
+  
+  .dialog-green {
+    .back {
+      @apply bg-green-dark;
+    }
+  
+    .front {
+      @apply bg-green
+    }
+  
+    .center {
+      scrollbar-color: var(--green-default) var(--green-default);
+      @apply bg-gradient-to-r from-green-light to-background-left
+    }
+  
+    h2 {
+      @apply text-green
+    }
   }
-
-  .front {
-    @apply bg-blue-dark
-  }
-
-  .center {
-    @apply bg-gradient-to-l from-blue-light to-background-left
-  }
-
-  h2 {
-    @apply text-blue-dark
-  }
-}
-
-.dialog-purple {
-  .back {
-    @apply bg-purple-dark;
-  }
-
-  .front {
-    @apply bg-purple
-  }
-
-  .center {
-    scrollbar-color: var(--purple-default) var(--purple-default);
-    @apply bg-gradient-to-r from-purple-light to-background-left
-  }
-
-  h2 {
-    @apply text-purple
-  }
-}
-
-.dialog-purple:hover {
-  .back {
-    @apply bg-purple;
-  }
-
-  .front {
-    @apply bg-purple-dark
-  }
-
-  .center {
-    @apply bg-gradient-to-l from-purple-light to-background-left
-  }
-
-  h2 {
-    @apply text-purple-dark
-  }
-}
-
-.dialog-green {
-  .back {
-    @apply bg-green-dark;
-  }
-
-  .front {
-    @apply bg-green
-  }
-
-  .center {
-    scrollbar-color: var(--green-default) var(--green-default);
-    @apply bg-gradient-to-r from-green-light to-background-left
-  }
-
-  h2 {
-    @apply text-green
-  }
-}
-
-.dialog-green:hover {
-  .back {
-    @apply bg-green;
-  }
-
-  .front {
-    @apply bg-green-dark
-  }
-
-  .center {
-    @apply bg-gradient-to-l from-green-light to-background-left
-  }
-
-  h2 {
-    @apply text-green-dark
+  
+  .dialog-green:hover {
+    .back {
+      @apply bg-green;
+    }
+  
+    .front {
+      @apply bg-green-dark
+    }
+  
+    .center {
+      @apply bg-gradient-to-l from-green-light to-background-left
+    }
+  
+    h2 {
+      @apply text-green-dark
+    }
   }
 }
