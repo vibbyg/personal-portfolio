@@ -9,7 +9,11 @@
     @media screen and (orientation: portrait) {
       height: 60dvh;
       width: 75vw;
+    }
 
+    @media screen and (orientation: portrait) and (max-device-width: 430px) {
+      height: 70dvh;
+      width: 75vw;
     }
 
     @media screen and (orientation: landscape) {
@@ -35,6 +39,10 @@
       top: 21dvh;
       left: 9.5vw;
     }
+    @media screen and (orientation: portrait) and (max-device-width: 430px) {
+      top: 16dvh;
+      left: 9.5vw;
+    }
   }
   
   .front-size {
@@ -45,6 +53,11 @@
       top: 17dvh;
       left: 17.5vw;
     }
+
+    @media screen and (orientation: portrait) and (max-device-width: 430px) {
+      top: 12dvh;
+      left: 17.5vw;
+    }
   }
   
   .center-size {
@@ -53,6 +66,11 @@
   
     @media screen and (orientation: portrait) {
       top: 19dvh;
+      left: 13vw;
+    }
+
+    @media screen and (orientation: portrait) and (max-device-width: 430px) {
+      top: 14dvh;
       left: 13vw;
     }
   }

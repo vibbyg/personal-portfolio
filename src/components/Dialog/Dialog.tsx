@@ -35,7 +35,7 @@ export const Dialog = ({ title, link, children, open, color, onDialogClick }: Di
             {link && <h3 className="self-end -mb-2 mt-2"><ArrowRight color={color} /></h3>}
           </div>
         </div>
-        <div className="w-screen h-screen z-40 backdrop-brightness-90 backdrop-blur-sm relative" onClick={onDialogClick} /> 
+        <div className="w-screen h-screen z-40 backdrop-brightness-90 backdrop-blur-sm relative overflow-hidden" onClick={onDialogClick} /> 
         </div>
       )
 }
