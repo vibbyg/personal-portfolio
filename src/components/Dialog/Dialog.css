@@ -2,150 +2,167 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer base {
   .dialog {
     transition: 0.5s;
+
     @media screen and (orientation: portrait) {
       height: 50vh;
       width: 75vw;
-      
+
     }
+
     @media screen and (orientation: landscape) {
       height: 66vh;
       width: 66vw;
-      
+
     }
+
+    h2 {
+      @apply md:text-4xl text-2xl m-2 flex justify-start;
+    }
+
     @apply border-solid border-4 rounded-lg fixed p-6 z-50 shadow-2xl border-stone-900;
   }
-  .dialog-h2 {
-      @apply md:text-4xl text-2xl m-2 flex justify-start
+}
+
+.back-size {
+  top: 20vh;
+  left: 16vw;
+
+  @media screen and (orientation: portrait) {
+    top: 26vh;
+    left: 9.5vw;
+  }
+}
+
+.front-size {
+  top: 12vh;
+  left: 20vw;
+
+  @media screen and (orientation: portrait) {
+    top: 22vh;
+    left: 17.5vw;
+  }
+}
+
+.center-size {
+  top: 16vh;
+  left: 18vw;
+
+  @media screen and (orientation: portrait) {
+    top: 24vh;
+    left: 13vw;
+  }
+}
+
+.dialog-blue {
+  .back {
+    @apply bg-blue-dark;
   }
 
-  .back-size {
-    top: 20vh;
-    left: 16vw;
-
-    @media screen and (orientation: portrait) {
-      top: 26vh;
-      left: 9.5vw;
-    }
+  .front {
+    @apply bg-blue;
   }
 
-  .front-size {
-    top: 12vh;
-    left: 20vw;
-
-    @media screen and (orientation: portrait) {
-      top: 22vh;
-      left: 17.5vw;
-    }
+  .center {
+    scrollbar-color: var(--blue-default) var(--blue-default);
+    @apply bg-gradient-to-r from-blue-light to-background-left
   }
 
-  .center-size {
-    top: 16vh;
-    left: 18vw;
+  h2 {
+    @apply text-blue
+  }
+}
 
-    @media screen and (orientation: portrait) {
-      top: 24vh;
-      left: 13vw;
-    }
+.dialog-blue:hover {
+  .back {
+    @apply bg-blue;
   }
 
-  .dialog-blue {
-    .back {
-      @apply dialog bg-blue-dark;
-    }
-    .front {
-      @apply dialog bg-blue;
-    }
-    .center {
-      scrollbar-color: var(--blue-default) var(--blue-default);
-      @apply dialog bg-gradient-to-r from-blue-light to-background-left
-    }
-
-    h2 {
-      @apply dialog-h2 text-blue
-    }
-  }
-  
-  .dialog-blue:hover {
-    .back {
-      @apply dialog bg-blue;
-    }
-    .front {
-      @apply dialog bg-blue-dark
-    }
-    .center {
-      @apply dialog bg-gradient-to-l from-blue-light to-background-left
-    }
-
-    h2 {
-      @apply dialog-h2 text-blue-dark
-    }
+  .front {
+    @apply bg-blue-dark
   }
 
-  .dialog-purple {
-    .back {
-      @apply dialog bg-purple-dark;
-    }
-    .front {
-      @apply dialog bg-purple
-    }
-    .center {
-      scrollbar-color: var(--purple-default) var(--purple-default);
-      @apply dialog bg-gradient-to-r from-purple-light to-background-left
-    }
-
-    h2 {
-      @apply dialog-h2 text-purple
-    }
-  }
-  .dialog-purple:hover {
-    .back {
-      @apply dialog bg-purple;
-    }
-    .front {
-      @apply dialog bg-purple-dark
-    }
-    .center {
-      @apply dialog bg-gradient-to-l from-purple-light to-background-left
-    }
-
-    h2 {
-      @apply dialog-h2 text-purple-dark
-    }
+  .center {
+    @apply bg-gradient-to-l from-blue-light to-background-left
   }
 
-  .dialog-green {
-    .back {
-      @apply dialog bg-green-dark;
-    }
-    .front {
-      @apply dialog bg-green
-    }
-    .center {
-      scrollbar-color: var(--green-default) var(--green-default);
-      @apply dialog bg-gradient-to-r from-green-light to-background-left
-    }
+  h2 {
+    @apply text-blue-dark
+  }
+}
 
-    h2 {
-      @apply dialog-h2 text-green
-    }
+.dialog-purple {
+  .back {
+    @apply bg-purple-dark;
   }
 
-  .dialog-green:hover {
-    .back {
-      @apply dialog bg-green;
-    }
-    .front {
-      @apply dialog bg-green-dark
-    }
-    .center {
-      @apply dialog bg-gradient-to-l from-green-light to-background-left
-    }
+  .front {
+    @apply bg-purple
+  }
 
-    h2 {
-      @apply dialog-h2 text-green-dark
-    }
+  .center {
+    scrollbar-color: var(--purple-default) var(--purple-default);
+    @apply bg-gradient-to-r from-purple-light to-background-left
+  }
+
+  h2 {
+    @apply text-purple
+  }
+}
+
+.dialog-purple:hover {
+  .back {
+    @apply bg-purple;
+  }
+
+  .front {
+    @apply bg-purple-dark
+  }
+
+  .center {
+    @apply bg-gradient-to-l from-purple-light to-background-left
+  }
+
+  h2 {
+    @apply text-purple-dark
+  }
+}
+
+.dialog-green {
+  .back {
+    @apply bg-green-dark;
+  }
+
+  .front {
+    @apply bg-green
+  }
+
+  .center {
+    scrollbar-color: var(--green-default) var(--green-default);
+    @apply bg-gradient-to-r from-green-light to-background-left
+  }
+
+  h2 {
+    @apply text-green
+  }
+}
+
+.dialog-green:hover {
+  .back {
+    @apply bg-green;
+  }
+
+  .front {
+    @apply bg-green-dark
+  }
+
+  .center {
+    @apply bg-gradient-to-l from-green-light to-background-left
+  }
+
+  h2 {
+    @apply text-green-dark
   }
 }
