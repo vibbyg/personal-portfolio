@@ -29,7 +29,6 @@ export const Holes = () => {
   useEffect(() => {
     const screenWidth = window?.screen.width;
     const screenHeight = window?.screen.height;
-    console.log(screenWidth, screenHeight)
     const dataWithLocation = previewData.map(data => ({...data, 'pos': getRandomPosition(screenWidth, screenHeight, 87, 13), 'open': false}));
     setHoles(dataWithLocation)
   }, [])
@@ -44,7 +43,6 @@ export const Holes = () => {
                 offsetLeft={hole.pos.positionX}
                 offsetTop={hole.pos.positionY}
                 onHoleClick={() => {
-                  console.log(hole)
                   setOpen(hole)
                 }}
                 color={hole.color}

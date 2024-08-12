@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer components {
   .dialog {
     transition: 0.5s;
     @media screen and (orientation: portrait) {
