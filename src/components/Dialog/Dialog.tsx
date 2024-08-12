@@ -16,15 +16,15 @@ export const Dialog = ({ title, link, children, open, color, onDialogClick }: Di
       (<div>
         <div className={`dialog-${color}`}>
           <div
-            className="back back-size"
+            className="back back-size dialog"
           >
           </div>
           <div
-            className="front front-size"
+            className="front front-size dialog"
           >
           </div>
           <div
-            className="center center-size fixed overflow-hidden flex flex-col justify-between"
+            className="center center-size fixed overflow-hidden flex flex-col justify-between dialog"
           >
             <h2>
               {title ?? "FILL ME IN!"}
