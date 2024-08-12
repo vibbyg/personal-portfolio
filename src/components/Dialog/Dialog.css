@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+@layer utilities {
   .dialog {
     transition: 0.5s;
     @media screen and (orientation: portrait) {
@@ -125,7 +125,7 @@
     }
     .center {
       scrollbar-color: var(--green-default) var(--green-default);
-      @apply dialog p-4 bg-gradient-to-r from-green-light to-background-left
+      @apply dialog bg-gradient-to-r from-green-light to-background-left
     }
 
     h2 {
