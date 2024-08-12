@@ -1,3 +1,4 @@
 ### Vibby's Personal Portfolio
 
-This is the repository for Vibhor's personal portfolio.
+This is to source code for Vibhor's Personal Portfolio.
+To access the portfolio, got to [https://vibby.vercel.app/] !
