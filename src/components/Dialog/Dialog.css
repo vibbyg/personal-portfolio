@@ -7,13 +7,13 @@
     transition: 0.5s;
 
     @media screen and (orientation: portrait) {
-      height: 50vh;
+      height: 50dvh;
       width: 75vw;
 
     }
 
     @media screen and (orientation: landscape) {
-      height: 66vh;
+      height: 66dvh;
       width: 66vw;
 
     }
@@ -28,31 +28,31 @@
 
 @layer components {
   .back-size {
-    top: 20vh;
+    top: 20dvh;
     left: 16vw;
   
     @media screen and (orientation: portrait) {
-      top: 26vh;
+      top: 26dvh;
       left: 9.5vw;
     }
   }
   
   .front-size {
-    top: 12vh;
+    top: 12dvh;
     left: 20vw;
   
     @media screen and (orientation: portrait) {
-      top: 22vh;
+      top: 22dvh;
       left: 17.5vw;
     }
   }
   
   .center-size {
-    top: 16vh;
+    top: 16dvh;
     left: 18vw;
   
     @media screen and (orientation: portrait) {
-      top: 24vh;
+      top: 24dvh;
       left: 13vw;
     }
   }
