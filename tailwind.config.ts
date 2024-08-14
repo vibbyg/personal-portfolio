@@ -72,10 +72,19 @@ const config: Config = {
         '50%': {
           transform: 'scale(1.15)'
         }
+      },
+      pulse: {
+        '0%, 100%': {
+          opacity: '1'
+        },
+        '50%': {
+          opacity: '.5'
+        }
       }
     },
     animation: {
-      'wobbling': 'wobble 2s ease-in-out 1'
+      'wobbling': 'wobble 2s ease-in-out 1',
+      'pulse': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
     }
   },
   plugins: [],
