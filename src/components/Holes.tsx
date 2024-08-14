@@ -22,6 +22,11 @@ type PreviewData = {
   pos: {};
 }
 
+const openNewLink = (url: string) => {
+  const win = window.open(url, '_blank');
+  win?.focus()
+}
+
 export const Holes = () => {  
   const [holes, setHoles] = useState<PreviewData[]>([]);
   const [open, setOpen] = useState<PreviewData>({} as PreviewData);
@@ -43,7 +48,7 @@ export const Holes = () => {
                 offsetLeft={hole.pos.positionX}
                 offsetTop={hole.pos.positionY}
                 onHoleClick={() => {
-                  setOpen(hole)
+                  hole.title === "resume" ? openNewLink(hole.link) : setOpen(hole)
                 }}
                 color={hole.color}
               />
@@ -52,24 +57,24 @@ export const Holes = () => {
         }
         {open &&
             open.link === "about" ?
-            (<AboutDialog key={open.id} open={!!open} link={open.link} color={open.color} title={open.title} onDialogClick={() => {
+            (<AboutDialog key={open.id} open={!!open} color={open.color} title={open.title} onDialogClick={() => {
                 setOpen({} as PreviewData)
               }} />
             )
             : open.link === "photography" ?
-            (<PhotoDialog key={open.id} open={!!open} link={open.link} color={open.color} title={open.title} onDialogClick={() => {
+            (<PhotoDialog key={open.id} open={!!open} color={open.color} title={open.title} onDialogClick={() => {
                 setOpen({} as PreviewData)
             }} 
             />
           )
           : open.link == "experience" ?
-          (<ExperienceDialog key={open.id} open={!!open} link={open.link} color={open.color} title={open.title} onDialogClick={() => {
+          (<ExperienceDialog key={open.id} open={!!open} color={open.color} title={open.title} onDialogClick={() => {
             setOpen({} as PreviewData)
           }} 
             />
           )
           : open.link == "projects" ?
-          (<ProjectsDialog key={open.id} open={!!open} link={open.link} color={open.color} title={open.title} onDialogClick={() => {
+          (<ProjectsDialog key={open.id} open={!!open} color={open.color} title={open.title} onDialogClick={() => {
             setOpen({} as PreviewData)
           }} 
             />

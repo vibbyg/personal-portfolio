@@ -25,8 +25,8 @@ export const previewData = [
   },
   {
     id: 5,
-    title: 'my mind',
-    link: 'blog',
+    title: 'resume',
+    link: 'https://drive.google.com/file/d/1Hq2PVqN4VUwNs712-VoiF9dg9Z6h02hA/view?usp=sharing',
     color: 'default',
   }
 ]

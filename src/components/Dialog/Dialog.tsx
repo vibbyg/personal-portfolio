@@ -24,7 +24,7 @@ export const Dialog = ({ title, link, children, open, color, onDialogClick }: Di
           >
           </div>
           <div
-            className="center center-size overflow-hidden flex flex-col justify-between dialog"
+            className="center center-size overflow-hidden flex flex-col justify-start dialog"
           >
             <h2>
               {title ?? "FILL ME IN!"}
