@@ -10,6 +10,7 @@ const sarabun = Sarabun({ subsets: ['latin'], weight: ['400'] });
 export const metadata: Metadata = {
   title: "VibbySite",
   description: "Vibhor's personal portfolio",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({

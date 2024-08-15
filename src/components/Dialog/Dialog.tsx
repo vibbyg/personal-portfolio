@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
 import './Dialog.css'
 import { ArrowRight } from "../ArrowRight"
+import Link from "next/link"
 interface Dialog {
   color: string,
   title?: string,
@@ -32,7 +33,7 @@ export const Dialog = ({ title, link, children, open, color, onDialogClick }: Di
             <div className="overflow-scroll pr-4">
               {children ?? 'nothing to see here...'}
             </div>
-            {link && <h3 className="self-end -mb-2 mt-2"><ArrowRight color={color} /></h3>}
+            {link && <Link className="self-end mt-6" href={`/${link}`}><ArrowRight color={color} /></Link>}
           </div>
         </div>
         <div className="w-screen h-screen z-40 backdrop-brightness-90 backdrop-blur-sm relative overflow-hidden" onClick={onDialogClick} /> 

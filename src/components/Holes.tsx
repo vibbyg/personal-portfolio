@@ -57,7 +57,7 @@ export const Holes = () => {
         }
         {open &&
             open.link === "about" ?
-            (<AboutDialog key={open.id} open={!!open} color={open.color} title={open.title} onDialogClick={() => {
+            (<AboutDialog key={open.id} open={!!open} link={open.link} color={open.color} title={open.title} onDialogClick={() => {
                 setOpen({} as PreviewData)
               }} />
             )
